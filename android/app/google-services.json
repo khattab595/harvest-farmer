@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367851682888",
+    "firebase_url": "https://harvest-f25b0.firebaseio.com",
+    "project_id": "harvest-f25b0",
+    "storage_bucket": "harvest-f25b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367851682888:android:c07f7a005b1dfbb965ac7d",
+        "android_client_info": {
+          "package_name": "akhattab595.harvest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367851682888-o5schh25gundu6to050ofknbbgpsv06i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "akhattab595.harvest",
+            "certificate_hash": "eaba82bb079585de1da9ea847b6a3844db853314"
+          }
+        },
+        {
+          "client_id": "367851682888-s8vtmmum8qkmhpms2qq50j3l58gmvr4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlKahpx7kasegnkEs_OQiy0yp_UidExd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367851682888-s8vtmmum8qkmhpms2qq50j3l58gmvr4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
