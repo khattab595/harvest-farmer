@@ -52,27 +52,27 @@ class ProductItem extends StatelessWidget {
             product.title,
             textAlign: TextAlign.center,
           ),
-          trailing: IconButton(
-            icon: Icon(Icons.shopping_cart),
-            onPressed: () {
-              cart.addItem(product.id, product.price, product.title);
-              Scaffold.of(context).hideCurrentSnackBar();
-              Scaffold.of(context).showSnackBar(SnackBar(
-                content: Text(
-                  'تم اضافة عنصر الي  المشتريات',
-                  textAlign: TextAlign.center,
-                ),
-                duration: Duration(seconds: 2),
-                action: SnackBarAction(
-                  label: 'الغاء الاضافه',
-                  onPressed: () {
-                    cart.removeSingleItem(product.id);
-                  },
-                ),
-              ));
-            },
-            color: Colors.white
-          ),
+          // trailing: IconButton(
+          //   icon: Icon(Icons.shopping_cart),
+          //   onPressed: () {
+          //     cart.addItem(product.id, product.price, product.title);
+          //     Scaffold.of(context).hideCurrentSnackBar();
+          //     Scaffold.of(context).showSnackBar(SnackBar(
+          //       content: Text(
+          //         'تم اضافة عنصر الي  المشتريات',
+          //         textAlign: TextAlign.center,
+          //       ),
+          //       duration: Duration(seconds: 2),
+          //       action: SnackBarAction(
+          //         label: 'الغاء الاضافه',
+          //         onPressed: () {
+          //           cart.removeSingleItem(product.id);
+          //         },
+          //       ),
+          //     ));
+          //   },
+          //   color: Colors.white
+          // ),
         ),
       ),
     );

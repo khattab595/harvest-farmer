@@ -59,10 +59,10 @@ class AuthScreen extends StatelessWidget {
                         ],
                       ),
                       child: Text(
-                        'Harvest',
+                        'Harvest Farmer',
                         style: TextStyle(
-                          color: Theme.of(context).accentTextTheme.title.color,
-                          fontSize: 50,
+                          color:Colors.white,
+                          fontSize: 25,
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.normal,
                         ),

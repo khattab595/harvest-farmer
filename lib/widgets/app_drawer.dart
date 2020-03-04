@@ -9,7 +9,7 @@ class AppDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          AppBar(title: Text('مرحبا بالاصدقاء '),
+          AppBar(title: Text('مرحبا بالمزارعين '),
           centerTitle: true,
           backgroundColor: Colors.green,
           automaticallyImplyLeading: false,),
@@ -20,13 +20,13 @@ class AppDrawer extends StatelessWidget {
             Navigator.of(context).pushReplacementNamed("/");
 
           },),
-          Divider(),
-          ListTile(leading: Icon(Icons.payment),
-            title: Text('المتطلبات'),
-            onTap: (){
-              Navigator.of(context).pushNamed(CartScreen.routeName);
-              //Navigator.of(context).pushReplacement (CustomRoute(builder: (ctx)=>OrderScreen(),));
-            },),
+//          Divider(),
+//          ListTile(leading: Icon(Icons.payment),
+//            title: Text('المتطلبات'),
+//            onTap: (){
+//              Navigator.of(context).pushNamed(CartScreen.routeName);
+//              //Navigator.of(context).pushReplacement (CustomRoute(builder: (ctx)=>OrderScreen(),));
+//            },),
           Divider(),
           ListTile(leading: Icon(Icons.edit),
             title: Text('ادارة المنتجات'),

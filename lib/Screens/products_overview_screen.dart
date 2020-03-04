@@ -49,7 +49,7 @@ class _ProdactsOverViewScreenState extends State<ProdactsOverViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(title: Text("Harvest"),
+      appBar: AppBar(title: Text("Harvest Farmer"),
           backgroundColor: Colors.green,
           actions: <Widget>[
         PopupMenuButton(
@@ -74,18 +74,7 @@ class _ProdactsOverViewScreenState extends State<ProdactsOverViewScreen> {
             )
           ],
         ),
-        Consumer<Cart>(
-          builder: (_, cart, ch ) => Badge(
-            child: ch,
-            value: cart.itemCount.toString(),
-          ),
-          child: IconButton(
-              icon: Icon(Icons.shopping_cart,color: Colors.white,),
-              onPressed: (){
-            Navigator.of(context).pushNamed(CartScreen.routeName);
-
-              }),
-        ),
+        
       ]
       ),
       drawer: AppDrawer(),
