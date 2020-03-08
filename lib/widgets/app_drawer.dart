@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Screens/cart_screen.dart';
+import 'package:harvest/Screens/seting%20screen.dart';
+import 'package:harvest/seting_screen_details/conected_with_me.dart';
+
 import '../providers/auth.dart';
 import '../Screens/user_products_screen.dart';
 import 'package:provider/provider.dart';
@@ -31,9 +33,28 @@ class AppDrawer extends StatelessWidget {
           ListTile(leading: Icon(Icons.edit),
             title: Text('ادارة المنتجات'),
             onTap: (){
-              Navigator.of(context).pushReplacementNamed(UserProductsScreen.routeName);
+             Navigator.of(context).pushReplacementNamed(UserProductsScreen.routeName);
 
             },),
+          Divider(),
+          ListTile(leading: Icon(Icons.phone_forwarded),
+            title: Text('للتواصل معنا'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => new  Conected_me()));
+            },),
+          Divider(),
+          ListTile(leading: Icon(Icons.settings),
+            title: Text('الاعدادات'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => new  seteing_screen()));
+            },),
+
           Divider(),
           ListTile(leading: Icon(Icons.exit_to_app),
             title: Text('تسجيل الخروج'),

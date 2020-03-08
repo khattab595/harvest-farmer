@@ -32,6 +32,7 @@ dependencies:
   firebase_core: any
   firebase_storage: any
   page_view_indicator: any
+  url_launcher: any
 
 
 dev_dependencies:
