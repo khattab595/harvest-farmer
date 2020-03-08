@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:harvest/Screens/seting%20screen.dart';
-import 'package:harvest/seting_screen_details/conected_with_me.dart';
+import 'package:harvest/Screens/settings_account_screen.dart';
+ import '../Screens/settings_account_screen.dart';
 
 import '../providers/auth.dart';
 import '../Screens/user_products_screen.dart';
@@ -22,13 +23,7 @@ class AppDrawer extends StatelessWidget {
             Navigator.of(context).pushReplacementNamed("/");
 
           },),
-//          Divider(),
-//          ListTile(leading: Icon(Icons.payment),
-//            title: Text('المتطلبات'),
-//            onTap: (){
-//              Navigator.of(context).pushNamed(CartScreen.routeName);
-//              //Navigator.of(context).pushReplacement (CustomRoute(builder: (ctx)=>OrderScreen(),));
-//            },),
+
           Divider(),
           ListTile(leading: Icon(Icons.edit),
             title: Text('ادارة المنتجات'),
@@ -37,15 +32,15 @@ class AppDrawer extends StatelessWidget {
 
             },),
           Divider(),
-          ListTile(leading: Icon(Icons.phone_forwarded),
-            title: Text('للتواصل معنا'),
+          ListTile(leading: Icon(Icons.person),
+            title: Text('  الملف الشخصي'),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => new  Conected_me()));
+                      builder: (context) => new  SettingsAccountScreen()));
             },),
-          Divider(),
+
           ListTile(leading: Icon(Icons.settings),
             title: Text('الاعدادات'),
             onTap: () {

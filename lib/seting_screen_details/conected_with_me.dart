@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:harvest/Screens/products_overview_screen.dart';
-import '../Screens/auth_screen.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,10 +31,14 @@ class _MyHomePageState extends State<Conected_me> {
 
   Widget build(BuildContext context) {
     return new Scaffold(
+        appBar: AppBar(
+          title: Text("Harvest Farmer"),
+          backgroundColor: Colors.green,
+        ),
         body: new Stack(
       children: <Widget>[
         ClipPath(
-          child: Container(color: Colors.green),
+          child: Container(color: Colors.lightGreen),
           clipper: getClipper(),
         ),
         Positioned(
@@ -51,7 +53,7 @@ class _MyHomePageState extends State<Conected_me> {
                         color: Colors.greenAccent,
                         image: DecorationImage(
                             image: NetworkImage(
-                                "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/70048258_952941325045661_4803736103838285824_n.png?_nc_cat=103&_nc_oc=AQkQ7Gj-fCCo2ZK1R00lQEP1fxbNzaHTPKYBz_jv7rt2fknq2O8Ejz6ChgJwl6PR4uQ&_nc_ht=scontent-hbe1-1.xx&oh=427702e99e7399c12be8c46318430b9c&oe=5E0F6CCD"),
+                                "https://k.top4top.io/p_1528uy8no1.jpg"),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(Radius.circular(75.0)),
                         boxShadow: [
@@ -155,34 +157,7 @@ class _MyHomePageState extends State<Conected_me> {
 //                      ),
 //                    )),
 //                SizedBox(height: 15.0),
-                Container(
-                    height: 30.0,
-                    width: 220.0,
-                    child: Material(
-                      borderRadius: BorderRadius.circular(20.0),
-                      shadowColor: Colors.greenAccent,
-                      color: Colors.green,
-                      elevation: 7.0,
-                      child: GestureDetector(
-//                        onTap: () {
-//                          Navigator.push(
-//                              context,
-//                              MaterialPageRoute(
-//                                  builder: (context) => new ProdactsOverViewScreen()));
-//                        },
-                        onTap: (){
-                          Navigator.of(context).pushReplacementNamed("/");
 
-                        },
-                        child: Center(
-                          child: Text(
-                            'خروج',
-                            style: TextStyle(
-                                color: Colors.white, fontFamily: 'Montserrat'),
-                          ),
-                        ),
-                      ),
-                    ))
               ],
             ))
       ],

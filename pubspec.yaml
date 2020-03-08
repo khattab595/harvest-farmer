@@ -33,6 +33,7 @@ dependencies:
   firebase_storage: any
   page_view_indicator: any
   url_launcher: any
+  share: any
 
 
 dev_dependencies:
@@ -48,7 +49,7 @@ flutter:
 
 
   assets:
-    - assets/images/._product-placeholder.png
+
     - assets/images/_product-placeholder.jpg
     - assets/images/1.jpg
     - assets/images/2.jpg
