@@ -36,6 +36,7 @@ dependencies:
   share: any
 
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -55,6 +56,7 @@ flutter:
     - assets/images/2.jpg
     - assets/images/3.jpg
     - assets/images/4.jpg
+    - assets/images/photobaye.png
 
   fonts:
     - family: Lato

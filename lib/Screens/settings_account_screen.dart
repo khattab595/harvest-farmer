@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:harvest/Screens/user_products_screen.dart';
+import 'package:harvest/seting_screen_details/payment_screen.dart';
+
 import '../widgets/app_drawer.dart';
+import 'auth_screen.dart';
 
 enum SingingCharacter { Arabic, English }
 
@@ -95,13 +99,127 @@ class _SettingsAccountScreenState extends State<SettingsAccountScreen> {
               ),
             ),
             Divider(),
-            _listTile('تعديل معلومات الحساب'),
-            Divider(),
-            _listTile('تعديل كلمة المرور'),
-            Divider(),
-            _listTile('اعدادات الدفع'),
-            Divider(),
-            _listTile('ادارة العناوين'),
+          Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 15.0),
+                Container(
+                    height: 50.0,
+                    width: 280.0,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(20.0),
+                      shadowColor: Colors.greenAccent,
+                      color: Colors.green,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new AuthScreen()));
+                        },
+                        child: Row(
+                          children: <Widget>[
+
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 60.0),
+                                child: Text(
+                                  ' تعديل كلمة المرور',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontFamily: 'Montserrat'),
+                                
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )),
+                SizedBox(height: 15.0),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 50.0,
+                      width: 280.0,
+                      child: Material(
+                        borderRadius: BorderRadius.circular(20.0),
+                        shadowColor: Colors.greenAccent,
+                        color: Colors.green,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new payment()));
+                          },
+                          child: Row(
+                            children: <Widget>[
+
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 120.0),
+                                  child: Text(
+                                    'الدفع',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontFamily: 'Montserrat'),
+                                    textDirection: TextDirection.rtl,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )),
+                ),
+                SizedBox(height: 15.0),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 50.0,
+                      width: 280.0,
+                      child: Material(
+                        borderRadius: BorderRadius.circular(20.0),
+                        shadowColor: Colors.greenAccent,
+                        color: Colors.green,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new UserProductsScreen()));
+                          },
+                          child: Row(
+                            children: <Widget>[
+
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right:80.0),
+                                  child: Text(
+                                    'ادارة المنتجات',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontFamily: 'Montserrat'),
+                                    textDirection: TextDirection.rtl,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )),
+                ),
+              ],
+            ),
+          ),
+
             Divider(),
             Padding(
               padding: const EdgeInsets.only(right: 18.0),
@@ -139,7 +257,7 @@ class _SettingsAccountScreenState extends State<SettingsAccountScreen> {
                     child: RadioListTile<SingingCharacter>(
                       activeColor: Colors.green,
                       title: const Text(
-                        ' عربي',
+                        ' ع  ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
@@ -156,7 +274,7 @@ class _SettingsAccountScreenState extends State<SettingsAccountScreen> {
                   Expanded(
                     child: RadioListTile<SingingCharacter>(
                       title: const Text(
-                        'Eng',
+                        'E ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
@@ -179,12 +297,5 @@ class _SettingsAccountScreenState extends State<SettingsAccountScreen> {
     );
   }
 
-  Widget _listTile(String title) {
-    return ListTile(
-      title: Text(
-        title,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-      ),
-    );
-  }
+
 }
