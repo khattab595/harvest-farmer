@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:harvest/Screens/seting%20screen.dart';
-import 'package:harvest/Screens/settings_account_screen.dart';
- import '../Screens/settings_account_screen.dart';
+import 'package:harvest/Screens/mazad.dart';
+import 'package:harvest/Screens/user_mazad.dart';
+import '../Screens/seting%20screen.dart';
+import '../Screens/settings_account_screen.dart';
+
 
 import '../providers/auth.dart';
 import '../Screens/user_products_screen.dart';
@@ -32,6 +34,13 @@ class AppDrawer extends StatelessWidget {
 
             },),
           Divider(),
+          ListTile(leading: Icon(Icons.add_circle),
+            title: Text('اضافة منتج للمزاد'),
+            onTap: (){
+              Navigator.of(context).pushReplacementNamed(UserProductsScreenmazad.routeName);
+
+            },),
+          Divider(),
           ListTile(leading: Icon(Icons.person),
             title: Text('  الملف الشخصي'),
             onTap: () {
@@ -40,7 +49,7 @@ class AppDrawer extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => new  SettingsAccountScreen()));
             },),
-
+          Divider(),
           ListTile(leading: Icon(Icons.settings),
             title: Text('الاعدادات'),
             onTap: () {
