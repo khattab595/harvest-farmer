@@ -70,5 +70,4 @@ flutter:
         - asset: assets/fonts/Anton-Regular.ttf
           weight: 700
 
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+

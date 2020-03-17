@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:path/path.dart' as Path;
-import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -289,67 +289,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                     ),
                   ],
                 ),
-
-                _image != null
-                    ? Image.file(
-                  _image,
-                  height: 150,
-                )
-                    : Container(height: 150),
-                _image == null
-                    ? RaisedButton(
-                  child: Text('Choose File'),
-                  onPressed: chooseFile,
-                  color: Colors.cyan,
-                )
-                    : Container(),
-                _image != null
-                    ? RaisedButton(
-                  child: Text('Upload Image'),
-                  onPressed: uploadFile,
-                  color: Colors.cyan,
-                )
-                    : Container(),
-
-                Container(),
-                Text('Uploaded Image'),
-                _uploadedFileURL != null
-                    ? Image.network(
-                  _uploadedFileURL,
-                  height: 150,
-                )
-                    : Container(),
-              ],
-            )),
-      ),
+    ])
+      ))
     );
-  }
 
-  File _image;
-  String _uploadedFileURL;
-
-
-  Future chooseFile() async {
-    await ImagePicker.pickImage(source: ImageSource.gallery).then((image) {
-      setState(() {
-        _image = image;
-      });
-    });
-  }
-  Future uploadFile() async {
-    StorageReference storageReference = FirebaseStorage.instance
-        .ref()
-        .child('img/${Path.basename(_image.path)}}');
-
-    StorageUploadTask uploadTask = storageReference.putFile(_image);
-    await uploadTask.onComplete;
-    print(_image.path);
-    print('Image Uploaded');
-    storageReference.getDownloadURL().then((fileURL) {
-      setState(() {
-        _uploadedFileURL = fileURL;
-      });
-      print(_uploadedFileURL);
-    });
   }
 }

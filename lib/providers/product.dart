@@ -27,7 +27,7 @@ class Product with ChangeNotifier {
     final oldStatus = isFavorite;
     isFavorite = !isFavorite;
     notifyListeners();
-    final url = 'https://harvest-f25b0.firebaseio.com/userFavorites/$userId/$id.json?auth=$token';
+    final url = 'https://harvist-app.firebaseio.com/userFavorites/$userId/$id.json?auth=$token';
     try {
       final response = await http.put(
         url,
