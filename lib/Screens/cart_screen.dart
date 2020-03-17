@@ -42,7 +42,7 @@ class _CartScreenState extends State<CartScreen> {
                   Spacer(),
                   Chip(
                     label: Text(
-                      '\$${cart.totalAmpunt.toStringAsFixed(2)}',
+                      '\$SR{cart.totalAmpunt.toStringAsFixed(2)}',
                       style: TextStyle(
                           color:Colors.white),
                     ),
